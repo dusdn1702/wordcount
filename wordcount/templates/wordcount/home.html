@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>wordcounter</title>
+</head>
+<body>
+<a class="container">
+<center>
+    <h1 style="color:#ffffff">WORD COUNT</h1>
+    <a href="{% url 'About' %}" style="color:#ffffff"> ABOUT </a><br><br>
+    <form class="box" action="{% url 'count' %}">
+		<br>
+		<textarea cols="120" rows="10" name="fulltext"></textarea>
+		<br><br>
+		<input type="submit" value="Count" />
+		<br><br>
+    </form>
+    <input type="text" class="count" readonly="true">
+</center>
+</a>
+    <script>
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+</body>
+</html>
+
+
+<style>
+body{
+    margin: 15vh 20% auto 20%;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-family: sans-serif;
+    background: #F6CECE;
+}
+
+.box{
+    position: relative;
+	margin : auto;
+    width: 100%;
+    height: 50%;
+    background: #ffffff;
+    overflow: hidden;
+}
+.container1{
+    margin-left: 20%;
+    margin: auto;
+}
+
+.content_box{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    Left: 0;
+    box-sizing: 20px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 24px;
+    overflow-y: auto;
+    color: #F5EE3A;
+    background: #97cadb;
+    border: none;
+}
+
+.count{
+    position: absolute;
+    display: float;
+    bottom: 0;
+    right: 0;
+    background: #ffff;
+    color: #000000;
+    text-align: center;
+    outline: none;
+    border: none;
+    width: 100px;
+    font-size: 36px;
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 4rem;
+}
+.input_button{
+    position: absolute;
+    display: inline;
+    color: #ffffff;
+    background: #02457a;
+    border-radius: 2rem;
+}
+
+form{
+    color:#a9a9a9;
+}
+
+</style>
